@@ -114,14 +114,16 @@ const accordion = (panel) => {
     const toggleTab = (index, index2) => {
         event.preventDefault();
       for (let i = 0; i < allPanel.length; i++){
-          if (index === i || index2 === i){
+          if (index === i){
               allPanel[i].style.display = 'block';
               console.log('click');
-          } else {
+          }else if(index2 === i){
+              allPanel[i].style.display = 'block';
+          }
+          else{
               allPanel[i].style.display = 'none';
           }
       }
-
     };
 panelGroup.addEventListener('click', (event)=>{
     // event.preventDefault();
@@ -134,29 +136,21 @@ panelGroup.addEventListener('click', (event)=>{
             if(item === target){
                 toggleTab(index);
             }
-        }); 
+        });
     }else{
-        calcButton.forEach((item, index2)=>{
-            if(item === target2){
-                toggleTab(index2);
+        calcButton.forEach((item2, index)=>{
+            if(item2 === target2){
+                toggleTab(index+1);
             }
         });
     }
 });
-console.log(calcButton);
 };
 accordion('accordion');
 accordion('accordion-two');
 
-//калькулятор ,аккордион-------------------------------------------
-// const calc = (button) => {
-//
-//
-//     console.log(panelCollapse);
-//     console.log(nextButton);
-//     console.log(oneChek);
-//     console.log(selectBoxs);
-//     console.log(allCalc);
-// };
-//
-// calc();
+// калькулятор-----------------------------------------------
+
+const calc = () => {
+
+};
