@@ -134,7 +134,7 @@ panelGroup.addEventListener('click', (event)=>{
             if(item === target){
                 toggleTab(index);
             }
-        });
+        }); 
     }else{
         calcButton.forEach((item, index2)=>{
             if(item === target2){
