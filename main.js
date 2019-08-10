@@ -109,54 +109,54 @@ sendMainForm('.popup-call .capture-form');
 const accordion = (panel) => {
     const panelGroup = document.getElementById(panel),
         allPanel = document.querySelectorAll('.panel-collapse'),
+        calcButton = document.querySelectorAll('.construct-btn'),
         panelTitle = document.querySelectorAll('.panel-heading');
-    const toggleTab = (index) => {
+    const toggleTab = (index, index2) => {
         event.preventDefault();
       for (let i = 0; i < allPanel.length; i++){
-          if (index === i){
+          if (index === i || index2 === i){
               allPanel[i].style.display = 'block';
-          }else {
+              console.log('click');
+          } else {
               allPanel[i].style.display = 'none';
           }
       }
+
     };
 panelGroup.addEventListener('click', (event)=>{
     // event.preventDefault();
     let target = event.target;
+    let target2 = event.target;
     target = target.closest('.panel-heading');
+    target2 = target2.closest('.construct-btn');
     if (target){
         panelTitle.forEach((item, index)=>{
             if(item === target){
                 toggleTab(index);
             }
         });
+    }else{
+        calcButton.forEach((item, index2)=>{
+            if(item === target2){
+                toggleTab(index2);
+            }
+        });
     }
 });
+console.log(calcButton);
 };
 accordion('accordion');
 accordion('accordion-two');
 
 //калькулятор ,аккордион-------------------------------------------
-// const calcAccord = () => {
-// const constructor = document.querySelector('.constructor'),
-//     panelGroup = document.getElementById('accordion'),
-//     greenPanel = document.querySelectorAll('#accordion .panel-default'),
-//     collapsePanel = document.querySelectorAll('#accordion .panel-collapse');
+// const calc = (button) => {
 //
-// constructor.addEventListener('click', (event) =>{
-//     let target = event.target;
-//     target = target.closest('#accordion');
-//     if (target) {
-//         greenPanel.forEach((item, index))
-//     }
-// });
 //
-//     console.log(constructor);
-//     console.log(panelGroup);
-//     console.log(greenPanel);
-//     console.log(collapsePanel);
-//     // console.log(inputText);
-//     // console.log(calcResult);
-//     // console.log(allCollaps);
+//     console.log(panelCollapse);
+//     console.log(nextButton);
+//     console.log(oneChek);
+//     console.log(selectBoxs);
+//     console.log(allCalc);
 // };
-// calcAccord();
+//
+// calc();
