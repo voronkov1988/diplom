@@ -235,11 +235,35 @@ const calc = () => {
 
         }
     });
-    getResult.addEventListener('click', ()=>{
+    getResult.addEventListener('click', (event)=>{
+        if (lastInput){
+            let metr = lastInput.value;
+            lastInput.setAttribute('name_allMetres', metr);
+            console.log(metr);
+        }
         if (getResult){
             total = total * col1 * col2 * diametr1 * diametr2 + dno;
             calcResult.placeholder = total;
+            calcResult.setAttribute('name_calcCost', total);
+            console.log(calcResult);
         }
+        const formData = new FormData(calcResult, lastInput);
+        let body = {};
+        formData.forEach((val, key) => {
+            body[key] = val;
+        });
+        postData(body)
+        const postData = (calcResult, lastInput) => {
+            return fetch('./server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body),
+            });
+        };
     });
     };
 calc();
+
+
