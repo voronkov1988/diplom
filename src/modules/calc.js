@@ -47,17 +47,6 @@ const calc = () => {
 
     checkBox1.addEventListener('change',  (event)=>{
         checkBox1.checked ? total = 10000 : total = 15000;
-    });
-    checkBox2.addEventListener('change', ()=>{
-        if (checkBox1.checked || checkBox2.checked){
-            dno = 1000;
-        }else if(checkBox2.checked){
-            dno = 2000;
-        }else{
-            dno = 0;
-        }
-    });
-    btnOne[0].addEventListener('change', ()=> {
         if (checkBox1.checked) {
             titleText[1].style.display = 'none';
             select33.style.display = 'none';
@@ -76,6 +65,16 @@ const calc = () => {
 
         }
     });
+    checkBox2.addEventListener('change', ()=>{
+        if (checkBox1.checked || checkBox2.checked){
+            dno = 1000;
+        }else if(checkBox2.checked){
+            dno = 2000;
+        }else{
+            dno = 0;
+        }
+    });
+
     allBlock.addEventListener('change', (event)=>{
         let target = event.target;
         if (target.matches('select') || target.matches('input') || target.matches('button .construct-btn')){
