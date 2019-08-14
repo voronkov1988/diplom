@@ -35,21 +35,38 @@ function sendMainForm (forms,calc) {
         let checkBox1 = document.querySelector('#myonoffswitch');
         let body = {};
         if (checkBox1.checked) {
-            body['metres'] = lastInput.value;
-            body['value-diametr'] = select3Value;
-            body['value-col'] = select4Value;
+            if (mainForm.classList.contains('form-main-calc')){
+                body['metres'] = lastInput.value;
+                body['value-diametr'] = select3Value;
+                body['value-col'] = select4Value;
+                formData.forEach((val, key) => {
+                    body[key] = val;
+                });
+            }
+            else {
+                formData.forEach((val, key) => {
+                    body[key] = val;
+                });
+            }
 
-            formData.forEach((val, key) => {
-                body[key] = val;
-            });
         } else{
-            body['metres'] = lastInput.value;
-            body['value-diametr'] = select1Value;
-            body['value-col'] = select2Value;
-            formData.forEach((val, key) => {
-                body[key] = val;
-            });
+            if (mainForm.classList.contains('form-main-calc')){
+                body['metres'] = lastInput.value;
+                body['value-diametr'] = select1Value;
+                body['value-col'] = select2Value;
+                body['value-diametr2'] = select3Value;
+                body['value-col2'] = select4Value;
+                formData.forEach((val, key) => {
+                    body[key] = val;
+                });
+            }else {
+                formData.forEach((val, key) => {
+                    body[key] = val;
+                });
+            }
+
         }
+
 
         postData(body)
             .then((response) => {

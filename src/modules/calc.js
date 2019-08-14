@@ -59,9 +59,9 @@ const calc = () => {
             titleText[1].style.display = 'inline-block';
             select33.style.display = 'inline-block';
             select44.style.display = 'inline-block';
-            titleText[0].style.display = 'none';
-            select11.style.display = 'none';
-            select22.style.display = 'none';
+            titleText[0].style.display = 'inline-block';
+            select11.style.display = 'inline-block';
+            select22.style.display = 'inline-block';
 
         }
     });

@@ -4,7 +4,9 @@
     <list default="true" id="6b410e80-2205-4515-b433-58a65bef7fa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/calc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/calc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/sendMainForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/sendMainForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +60,8 @@
       <workItem from="1565616862510" duration="18077000" />
       <workItem from="1565717445495" duration="20684000" />
       <workItem from="1565763050502" duration="14915000" />
-      <workItem from="1565781249225" duration="529000" />
+      <workItem from="1565781249225" duration="1195000" />
+      <workItem from="1565805665654" duration="5338000" />
     </task>
     <servers />
   </component>
