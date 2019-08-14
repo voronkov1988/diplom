@@ -1,0 +1,24 @@
+{
+  "name": "diplomLight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voronkov1988/diplom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voronkov1988/diplom/issues"
+  },
+  "homepage": "https://github.com/voronkov1988/diplom#readme",
+  "devDependencies": {
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  }
+}

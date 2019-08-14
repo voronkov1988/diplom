@@ -175,7 +175,7 @@
                                 <div class="title-text">первый колодец (приемный)</div>
                                 <div class="select-box">
                                     <p><strong>Диаметр</strong></p>
-                                    <select class="form-control expand">
+                                    <select class="form-control expand" name="select">
                                         <option>1.4 метра</option>
                                         <option>2 метра</option>
                                     </select>
@@ -189,15 +189,15 @@
                                     </select>
                                 </div>
 
-                                <div class="title-text">второй колодец (дренажный)</div>
-                                <div class="select-box">
+                                <div class="title-text" style="display: none">второй колодец (дренажный)</div>
+                                <div class="select-box" style="display: none">
                                     <p><strong>Диаметр</strong></p>
                                     <select class="form-control expand">
                                         <option>1.4 метра</option>
                                         <option>2 метра</option>
                                     </select>
                                 </div>
-                                <div class="select-box">
+                                <div class="select-box" style="display: none">
                                     <p><strong>Количество колец</strong></p>
                                     <select class="form-control expand">
                                         <option>1 штука</option>
@@ -250,10 +250,10 @@
                             </h4>
                         </div>
                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
-                             aria-labelledby="headingFour">
+                             aria-labelledby="headingFour" >
                             <div class="panel-body">
                                 <p>Введите расстояние до дома</p>
-                                <input type="text">
+                                <input type="text" >
                                 <button class="button construct-btn call-btn">Получить расчет и скидку</button>
                             </div>
                         </div>
@@ -565,6 +565,6 @@
 </div>
 
 
-<script src="main.js"></script>
+<script src="./dist/main.js"></script>
 </body>
 </html>
