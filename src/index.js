@@ -10,7 +10,7 @@ import addBlock from './modules/addBlock';
 tooglePopup('.popup-call', '.construct-btn .call-btn');
 tooglePopup('.popup-discount', '.call-btn');
 tooglePopup('.popup-check', '.discount-btn');
-tooglePopup('.popup-consultation', '.check-btn');
+tooglePopup('.popup-check', '.check-btn');
 tooglePopup('.popup-consultation', '.director-btn');
 //отправка формы------------------------------------------------------
 sendMainForm('.main-form');
